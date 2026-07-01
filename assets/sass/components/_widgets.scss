@@ -1,0 +1,130 @@
+// search widget style here 
+.search-widget{
+    padding: 2.5rem 1.5rem;
+    border: 1px solid $color__theme;
+    border-radius: .25rem;
+    box-shadow: 0 5px 15px 3px rgba(#000001, 0.03);
+    margin-bottom: 1rem;
+    @include lg-up{
+        padding: 1rem;
+    }
+    @include xxl-up{
+        padding: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    .search-title{
+        font-size: 1rem; 
+        color: $color__heading;
+        line-height: 1;
+        margin-bottom: 1rem;
+        display: block;
+        font-weight: 500;
+        @include lg-up {
+            font-size: 1.125rem;
+        }
+    }
+    .input-group{
+        flex-wrap: nowrap;
+    }
+    input{
+        width: 100%;
+        background: $color__theme__400;
+        border-radius: .25rem;
+        height: 3.25rem;
+        border: 0;
+        font-size: 1rem;
+        outline: 0;
+        box-shadow: none;
+        padding: 1rem;
+        overflow: hidden;
+        @include lg-up{
+            height: 3rem;
+        }
+        @include xxl-up{
+            height: 3.25rem;
+        }
+        &:focus {
+            background: $color__theme__400;
+        }
+    }
+    .search-btn{
+        font-size: .875rem;
+        font-weight: 500;
+        color: $color__white;
+        line-height: 1.8;
+        padding: .675rem 1rem;
+        border: 0;
+        background: $color__theme;
+        border-radius: .25rem;
+        
+    }
+}
+// sidebar widget style here 
+.sidebar-widget{
+    padding: 2.25rem 1.5rem;
+    border: 1px solid $color__theme;
+    border-radius: .25rem;
+    box-shadow: 0 5px 15px 3px rgba(#000001, 0.03);
+    @include md-up{
+        padding: 3.25rem 2.5rem;
+    }
+    @include lg-up{
+        padding: 2.25rem 1.5rem;
+    }
+    @include xxl-up{
+        padding: 3.25rem 2.5rem;
+    }
+    .title{
+        font-size: 1rem;
+        font-weight: 500;
+        color: $color__heading;
+        line-height: 1.6;
+        margin-bottom: 1.25rem;
+        position: relative;
+        @include lg-up {
+            font-size: 1.125rem;
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            background: $color__theme;
+            height: .125rem;
+            width: 2.5rem;
+            top: -.675rem;
+            left: 0;
+        }
+    }
+    .widget-content{
+        a{
+            font-size: .875rem;
+            color: $color__black__500;
+            line-height: 1.7;
+            padding-bottom: .675rem;
+            display: block;
+            transition: all .15s ease;
+            background-position: 100% 100%;
+            background-repeat: no-repeat;
+            transition: all .5s ease;
+            width: 100%;
+            background-size: 201% 1px;
+            background-image: linear-gradient(to right, $color__heading 50%, transparent 50%);
+            border-bottom: 1px solid $color__theme__400;
+            @include lg-up {
+                font-size: 1rem;
+            }
+            & + a{
+                padding-top: .675rem;
+            }
+            &:hover{
+                color: $color__heading;
+                background-position: 0% 100%;
+            }
+        }
+    }
+    & + .sidebar-widget{
+        margin-top: 1rem;
+        @include xxl-up {
+            margin-top: 2rem;
+        }
+    }
+}

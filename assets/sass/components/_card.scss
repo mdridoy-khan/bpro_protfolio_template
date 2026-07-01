@@ -1,0 +1,73 @@
+// service card style here
+.service_card{
+    padding: 1.5rem;
+    background: $color__theme__500;
+    border: 1px solid $color__white;
+    transition: all .3s ease;
+    box-shadow: 0 4px 4px 0 rgba(#000000, 0.02);
+    border-radius: .5rem;
+    @include lg-up{
+        padding: 2.125rem;
+    }
+    @include xxl-up {
+        padding: 3.125rem;
+    }
+    .card-header{
+        @include flex-between;
+        background: none;
+        border: 0;
+        padding: 0;
+        margin-bottom: 1rem;
+        transition: all .3s ease;
+        @include xl-up {
+            margin-bottom: 1.875rem;
+        }
+        img{
+            transition: all .3s ease;
+            max-width: 2.2rem;
+            filter: invert(16%) sepia(99%) saturate(7493%) hue-rotate(250deg) brightness(39%) contrast(126%);
+            @include lg-up{
+                max-width: 3rem;
+            }
+        }
+    }
+    .title {
+        margin-bottom: .675rem;
+        a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            font-family: $font__primary;
+            line-height: 1.6;
+            color: $color__heading;
+            margin-bottom: .25rem;
+            @include lg-up{
+                font-size: 1.3rem;
+                margin-bottom: .625rem;
+            }
+            @include xl-up{
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .content{
+        font-size: .875rem;
+        line-height: 2;
+        color: $color__body;
+        @include lg-up {
+            font-size: 1rem;
+        }
+    }
+    &:hover{
+        background: $color__white;
+        border: 1px solid $color__theme;
+        .primary_btn{
+            background: $color__theme;
+            color: $color__white;
+        }
+        .card-header{
+            img{
+                transform: rotate(45deg);
+            }
+        }
+    }
+}

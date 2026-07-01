@@ -1,0 +1,381 @@
+// blog details style here
+.blog-details-area{
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+    @include lg-up{
+        padding-bottom: 5rem;
+        padding-top: 8rem;
+    }
+    @include xl-up{
+        padding-top: 6rem;
+    }
+    // banner image style here
+    .banner-wrapper{
+        position: relative;
+        margin-bottom: 0;
+        @include md-up{
+            margin-bottom: 2rem;
+        }
+        > img{
+            border-radius: .25rem .25rem 0 0;
+            height: 15rem;
+            object-fit: cover;
+            object-position: center;
+            @include sm-up {
+                height: auto;
+            }
+            @include md-up {
+                border-radius: .25rem;  
+            }
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            inset: 0;
+            background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(20,20,19,0.75) 75%);
+            width: 100%;
+            height: 100%;
+            border-radius: .25rem .25rem 0 0;
+            @include md-up{
+                border-radius: .5rem .5rem 0 0;
+            }
+        }
+    }
+    // banner meta style here 
+    .banner-blog-meta{
+        display: none;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        flex-direction: row;
+        @include md-up{
+            bottom: 2rem;
+            left: 2rem;
+            gap: 2.5rem;
+            align-items: center;
+            right: auto;
+            flex-direction: row;
+            display: flex;
+        }
+        @include xl-up{
+            bottom: 2rem;
+            left: 5rem;
+        }
+        .single-meta{
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            flex-direction: column;
+            @include md-up {
+                flex-direction: row;
+            }
+            .text{
+                font-size: .875rem;
+                line-height: 1.5;
+                color: $color__white;
+                font-weight: 400;
+            }
+        }
+    }
+    // blog meta sm style
+    .banner-blog-meta-sm {
+        display: none;
+        margin-bottom: 1.5rem;
+        @include md-down {
+            display: flex;
+            background: $color__black__500;
+            border-radius: 0 0 .25rem .25rem;
+            padding: .675rem 1rem;
+            align-items: end;
+            justify-content: space-between;
+        }
+        .single-meta{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: .5rem;
+            @include sm-up {
+                flex-direction: row;
+            }
+            .text {
+                font-size: .75rem;
+                font-weight: 500;
+                color: $color__white;
+            }
+        }
+    }
+    // blog description style here
+    .blog-description{
+        .title{
+            font-size: 1.5rem;
+            line-height: 1.2;
+            font-weight: 600;
+            color: $color__heading;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+            @include md-up{
+                font-size: 2rem;
+            }
+        }
+        .content{
+            color: $color__black__500;
+            line-height: 2;
+            margin-bottom: 1rem;
+            @include lg-up {
+                margin-bottom: 2rem;
+            }
+        }
+        .row {
+            --bs-gutter-x : 1rem;
+            @include lg-up {
+                --bs-gutter-x : 2rem;
+            }
+        }
+        .des-content{
+            margin-bottom: 1rem;
+            @include md-up{
+                margin-bottom: 3rem;
+            }
+            @include lg-up {
+                margin-bottom: 5rem;
+            }
+            a {
+                display: block;
+            }
+            img{
+                width: 100%;
+                border-radius: .25rem;
+                margin-bottom: 1rem;
+                @include lg-up {
+                    margin-bottom: 2rem;
+                }
+            }
+            .des-text{
+                font-size: .875rem;  
+                color: $color__black__500;
+                line-height: 2;
+                @include lg-up {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    // social icon and tags style here
+    .social-wrapper{
+        display: flex;
+        justify-content: space-between;
+        background: $color__theme__400;
+        padding: 1rem;
+        border-radius: .25rem;
+        margin-bottom: 3rem;
+        flex-direction: column;
+        gap: 1.5rem;
+        @include sm-up {
+            padding: 2rem 2.5rem;
+        }
+        @include md-up {
+            flex-direction: row;
+            align-items: center;
+        }
+        @include lg-up {
+            padding: 3rem 2.5rem;
+        }
+        @include xl-up{
+            margin-bottom: 5rem;
+        }
+        .social-icon-wrapper {
+            @include md-up {
+                display: flex;
+                gap: 1rem;
+            }
+        }
+        .social-icon{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .text{
+            font-size: 1rem;
+            line-height: 1.4;
+            color: $color__black__900;
+            @include md-down {
+                margin-bottom: 0.5rem;
+            }
+        }
+        .social-icon{
+            a{
+                font-size: 1rem;
+                color: $color__black__500;
+                &:hover{
+                    color: $color__theme;
+                }
+            }
+        }
+        // tags style here 
+        .tags{
+            gap: .5rem;
+            @include md-up {
+                display: flex;
+                align-items: center;
+            }
+            .tag-button{
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                flex-wrap: wrap;
+                justify-content: start;
+                @include md-up {
+                    gap: 1rem;
+                }
+            }
+            .tag-btn{
+                color: $color__black__500;
+                line-height: 1.6;
+                padding: .375rem 1rem;
+                border-radius: .25rem;
+                &:hover{
+                    color: $color__white;
+                }
+                @include lg-up {
+                    padding: .375rem 1.25rem;
+                }
+            }
+        }
+    }
+    // comment style here 
+    .comment-wrapper{
+        .title{
+            font-size: 1.2rem;
+            line-height: 1.2;
+            font-weight: 600;
+            color: $color__black__900;
+            margin-bottom: 2rem;
+            @include lg-up {
+                font-size: 1.5rem;
+            }
+        }
+        .comment-item{
+            display: flex;
+            gap: 1rem;
+            & + .comment-item{
+                margin-top: 1.875rem;
+            }
+        }
+        .comment-avatar{
+            flex: 0 0 2rem;
+            @include lg-up{
+                flex: 0 0 3rem;
+            }
+            @include xl-up{
+                flex: 0 0 3.5rem;
+            }
+        }
+        .comment-content{
+            flex: 1;
+        }
+        .avatar-name{
+            font-size: 1rem;
+            font-weight: 500;
+            color: $color__black__900;
+            line-height: 1.6;
+            @include lg-up{
+                font-size: 1.125rem;
+            }
+        }
+        .comment-meta{
+            font-size: .80rem;
+            display: inline-block;
+            line-height: 1.8;
+            color: $color__black__500;
+            margin-bottom: .5rem;
+            @include lg-up {
+                font-size: .875rem;
+            }
+        }
+        .comment{
+            font-size: .875rem;
+            line-height: 2; 
+            color: $color__black__500;
+            margin-bottom: .5rem;
+            @include lg-up {
+                font-size: 1rem;
+            }
+        }
+        .reply-text{
+            font-size: .875rem;
+            line-height: 1.8;
+            color: $color__black__900;
+            font-weight: 500;
+            @include lg-up {
+                font-size: 1rem;
+            }
+        }
+        .reply-box{
+            margin-top: 1rem;
+            textarea{
+                width: 100%;
+                outline: 0;
+                box-shadow: none;
+                border: 1px solid $color__heading;
+                border-radius: .25rem;
+                font-size: .875rem;
+                color: $color__heading;
+                height: 5rem;
+                transition: all .15s ease;
+                &:focus{
+                    border: 1px solid $color__theme;
+                }
+            }
+        }
+        // comment box style here
+        .comment-box{
+            padding: 1.5rem;
+            border-radius: .25rem;
+            background: $color__theme__400;
+            margin-top: 3.8rem;
+            box-shadow: 0 4px 4px 0 rgba(#000000, 0.02);
+            margin-bottom: 2rem;
+            @include lg-up{
+                margin-bottom: 0;
+            }
+            @include lg-up{
+                padding: 2.5rem;
+            }
+            .title{
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: $color__black__900;
+                line-height: 1.5;
+                margin-bottom: 1.25rem;
+                @include lg-up {
+                    font-size: 1.5rem;
+                }
+            }
+            input, textarea {
+                border: 0;
+            }
+            .add-comment-btn{
+                font-size: .875rem;
+                color: $color__white;
+                line-height: 1.6;
+                font-weight: 600;
+                background: $color__theme;
+                border-radius: .25rem;
+                border: 0;
+                box-shadow: 0 4px 4px 0 rgba(#000000, 0.02);
+                padding: .75rem 1rem;
+                transition: all .15s ease;
+                @include lg-up{
+                    padding: 1rem 2rem;
+                    font-size: 1rem;
+                }
+                &:hover{
+                    background: $color__hover;
+                }
+            }
+        }
+    }
+}

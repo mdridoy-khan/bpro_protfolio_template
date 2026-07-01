@@ -1,0 +1,60 @@
+// error main
+.error-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    margin: 5rem 0 3rem 0;
+
+    @include sm-up{
+        margin: 10rem 0 6rem 0;
+    }
+    @include xl-up {
+        margin: 6rem 0 6rem 0;
+    }
+    @include xxl-up{
+        margin: 0;
+    }
+    .error-content{
+        text-align: center;
+    }
+    .title{
+        font-size: 1.25rem;
+        font-family: $font__primary;
+        font-weight: 500;
+        color: $color__heading;
+        line-height: 1.4;
+        margin-bottom: 1.875rem;
+    }
+    img{
+        margin-bottom: 1.875rem;
+        max-width: 18rem;
+        @include sm-up{
+            max-width: 100%;
+        }
+    }
+    .message{
+        font-size: 1.25rem;
+        font-family: $font__primary;
+        font-weight: 500;
+        color: $color__heading;
+        line-height: 1.4;
+        margin-bottom: 1.875rem;
+    }
+    .btn-home{
+        font-size: 1rem;
+        font-weight: 600;
+        color: $color__white;
+        line-height: inherit;
+        padding: 1rem 2.25rem;
+        border-radius: .25rem;
+        background: $color__heading;
+        display: inline-block;
+        transition: all .15s ease;
+        &:hover{
+            background: #060885;
+        }
+    }
+}
